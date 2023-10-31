@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  ul
+    each genre in genre_list
+      li
+        a(href=genre.url) #{genre.name}
+
+  
+  if genre_list.length === 0
+    li There are no Genres.
